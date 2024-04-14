@@ -10,7 +10,7 @@ export default function GameGrid() {
 			<SimpleGrid
 				columns={{ sm: 1, md: 2, lg: 3, xl: 3 }}
 				padding="10px"
-				spacing="8px"
+				spacing="15px"
 			>
 				{games.map((game) => (
 					<GameCard game={game} />
