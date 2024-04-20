@@ -13,7 +13,7 @@ export default function GameGrid() {
 			<SimpleGrid
 				columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
 				padding="5px"
-				spacing="10px"
+				spacing={5}
 			>
 				{isLoading &&
 					count.map((_, index) => (
