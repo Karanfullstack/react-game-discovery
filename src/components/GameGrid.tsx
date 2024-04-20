@@ -4,13 +4,13 @@ import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
 import { Genre } from "../hooks/useGenre";
+import { GameQuery } from "../App";
 
 interface Props {
-	selectedGenre: Genre | null;
-	selectedPlatform: Platform | null
+	gameQuery:GameQuery
 }
-export default function GameGrid({ selectedGenre,selectedPlatform }: Props) {
-	const { errors, data, isLoading } = useGame(selectedGenre,selectedPlatform);
+export default function GameGrid({gameQuery}: Props) {
+	const { errors, data, isLoading } = useGame(gameQuery);
 	const count = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	return (
 		<>
