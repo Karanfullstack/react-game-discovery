@@ -9,7 +9,7 @@ interface GameProps {
 }
 export default function GameCard({ game }: GameProps) {
 	return (
-		<Card width="300px" borderRadius="10px" overflow="hidden">
+		<Card>
 			<Img src={getOptimizedImage(game.background_image)} />
 			<CardBody>
 				<Heading fontSize="xl">{game.name}</Heading>

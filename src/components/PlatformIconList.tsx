@@ -1,4 +1,4 @@
-import { Platform } from "../hooks/useGame";
+import { type Platform } from "../hooks/useGame";
 import { HStack, Icon } from "@chakra-ui/react";
 import {
 	FaWindows,
@@ -28,9 +28,9 @@ export default function PlatformIconList({ platforms }: PlatformIcon) {
 		web: BsGlobe,
 	};
 	return (
-		<HStack  marginTop={3}>
+		<HStack marginTop={3}>
 			{platforms.map((platform) => (
-				<Icon as={iconMap[platform.slug]} color="gray.500" />
+				<Icon key={platform.id} as={iconMap[platform.slug]} color="gray.500" />
 			))}
 		</HStack>
 	);
