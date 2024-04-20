@@ -6,11 +6,10 @@ import GameCardContainer from "./GameCardContainer";
 import { Genre } from "../hooks/useGenre";
 
 interface Props {
-	selectedGenre: Genre | null;
+	selectedGenre :Genre	| null;
 }
-export default function GameGrid(selectedGenre:Props) {
+export default function GameGrid({selectedGenre}: Props) {
 	const { errors, data, isLoading } = useGame(selectedGenre);
-
 	const count = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	return (
 		<>

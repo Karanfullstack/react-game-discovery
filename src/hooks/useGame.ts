@@ -14,9 +14,6 @@ export interface Game {
 	parent_platforms: { platform: Platform }[];
 	metacritic: number;
 }
-interface Props {
-	selectedGenre: Genre | null;
-}
-const useGame = (selectedGenre: Props) =>
-	useData<Game>("/games", { params: { genre: selectedGenre } }, [selectedGenre]);
+
+const useGame = (selectedGenre: Genre | null) => useData<Game>("/games", {params:{genres: selectedGenre?.id}},[selectedGenre?.id]);
 export default useGame;

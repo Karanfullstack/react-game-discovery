@@ -11,9 +11,8 @@ import { getOptimizedImage } from "../services/image-url";
 
 interface Props {
 	onSelectedGenre: (genre: Genre) => void;
-	selectedGenre: Genre | null;
 }
-export default function GenreList({ selectedGenre, onSelectedGenre }: Props) {
+export default function GenreList({ onSelectedGenre }: Props) {
 	const { data, isLoading, errors } = useGenre();
 	if (errors) return null;
 	if (isLoading) return <Spinner />;
@@ -33,7 +32,6 @@ export default function GenreList({ selectedGenre, onSelectedGenre }: Props) {
 							marginX={1}
 							fontSize="lg"
 							variant="link"
-							fontWeight={genre.id === selectedGenre?.id ? "bold" : ""}
 						>
 							{genre.name}
 						</Button>
