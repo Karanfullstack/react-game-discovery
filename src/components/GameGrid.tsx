@@ -6,19 +6,15 @@ import GameCardContainer from "./GameCardContainer";
 import { Genre } from "../hooks/useGenre";
 
 interface Props {
-	selectedGenre :Genre	| null;
+	selectedGenre: Genre | null;
 }
-export default function GameGrid({selectedGenre}: Props) {
+export default function GameGrid({ selectedGenre }: Props) {
 	const { errors, data, isLoading } = useGame(selectedGenre);
 	const count = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	return (
 		<>
 			{errors && <Text>{errors}</Text>}
-			<SimpleGrid
-				columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
-				padding="5px"
-				spacing={5}
-			>
+			<SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} spacing={5}>
 				{isLoading &&
 					count.map((_, index) => (
 						<GameCardContainer key={index}>

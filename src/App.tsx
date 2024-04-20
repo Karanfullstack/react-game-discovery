@@ -29,7 +29,7 @@ function App() {
 						<GenreList onSelectedGenre={(genre)=> setSelectedGenre(genre)} />
 					</GridItem>
 				</Show>
-				<GridItem area={"main"}>
+				<GridItem area={"main"} padding={3}>
 					<PlatformSelector />
 					<GameGrid selectedGenre={selectGenre} />
 				</GridItem>
