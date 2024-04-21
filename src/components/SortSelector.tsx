@@ -12,7 +12,7 @@ interface Props {
 	onSelectOrders: (sortorders: string) => void;
 	selectedOrder: string | null;
 }
-export default function SortSelector({ onSelectOrders,selectedOrder }: Props) {
+export default function SortSelector({ onSelectOrders, selectedOrder }: Props) {
 	const sortOrderes = [
 		{ value: "", label: "Relevance" },
 		{ value: "-added", label: "Date added" },
@@ -22,12 +22,14 @@ export default function SortSelector({ onSelectOrders,selectedOrder }: Props) {
 		{ value: "rating", label: "Aaverage rating" },
 	];
 
- const currentOrder = sortOrderes.find((order)=> order.value === selectedOrder)
+	const currentOrder = sortOrderes.find(
+		(order) => order.value === selectedOrder
+	);
 	return (
 		<Box paddingY={5}>
 			<Menu>
 				<MenuButton as={Button} rightIcon={<BsChevronDown />}>
-				{ "Order By " + currentOrder?.label ||  "Relevance"}
+					{"Order By " + currentOrder?.label || "Relevance"}
 				</MenuButton>
 				<MenuList>
 					{sortOrderes.map((sortorder) => (
