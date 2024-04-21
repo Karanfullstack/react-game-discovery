@@ -29,7 +29,7 @@ export default function SortSelector({ onSelectOrders, selectedOrder }: Props) {
 		<Box paddingY={5}>
 			<Menu>
 				<MenuButton as={Button} rightIcon={<BsChevronDown />}>
-					{"Order By " + currentOrder?.label || "Relevance"}
+					{"Order By " + currentOrder && currentOrder?.label || "Relevance"} 
 				</MenuButton>
 				<MenuList>
 					{sortOrderes.map((sortorder) => (
