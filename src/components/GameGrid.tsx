@@ -10,7 +10,7 @@ interface Props {
 }
 export default function GameGrid({ gameQuery }: Props) {
 	const { errors, data, isLoading } = useGame(gameQuery);
-	const count = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	const count = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12];
 	console.log(errors)
 	return (
 		<>

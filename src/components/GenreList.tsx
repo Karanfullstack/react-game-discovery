@@ -28,10 +28,10 @@ export default function GenreList({ onSelectedGenre }: Props) {
 						/>
 						<Button
 							onClick={() => onSelectedGenre(genre)}
-							whiteSpace={"nowrap"}
 							marginX={1}
-							fontSize="lg"
+							fontSize="md"
 							variant="link"
+							whiteSpace="normal"
 						>
 							{genre.name}
 						</Button>
