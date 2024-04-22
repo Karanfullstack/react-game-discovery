@@ -20,7 +20,7 @@ export default function PlatformIconList({ platforms }: PlatformIcon) {
 		pc: FaWindows,
 		playstation: FaPlaystation,
 		xbox: FaXbox,
-		nitendo: SiNintendo,
+		nintendo: SiNintendo,
 		mac: FaApple,
 		linux: FaLinux,
 		android: FaAndroid,

@@ -8,18 +8,17 @@ interface GameProps {
 	game: Game;
 }
 export default function GameCard({ game }: GameProps) {
-	
 	return (
 		<Card>
 			<Img src={getOptimizedImage(game?.background_image)} />
 			<CardBody>
-				<Heading fontSize="xl">{game.name}</Heading>
-				<HStack justifyContent="space-between">
+				<HStack justifyContent="space-between" marginBottom={3}>
 					<PlatformIconList
 						platforms={game?.parent_platforms?.map((p) => p.platform)}
 					/>
 					<CriticsScore score={game.metacritic} />
 				</HStack>
+					<Heading fontSize="xl">{game.name}</Heading>
 			</CardBody>
 		</Card>
 	);
