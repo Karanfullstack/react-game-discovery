@@ -1,30 +1,50 @@
-# React + TypeScript + Vite
+# Game Discovery Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Game Discovery Application](https://github.com/Karanfullstack/react-game-discovery/blob/main/src/assets/Screenshot%202024-04-23%20at%2009.44.40.png?raw=true)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to the Game Discovery Application repository! This web application is designed to provide users with a seamless experience in discovering games. Whether you're looking for a specific title, interested in browsing through a variety of options, or seeking recommendations, this application has got you covered.
 
-## Expanding the ESLint configuration
+## Key Features:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Search:** Easily search for your favorite games by title, genre, or any relevant keywords.
+- **Sort:** Sort games based on various criteria such as popularity, release date, or user ratings.
+- **Filter:** Refine your search results with filters based on genre, platform, or other attributes.
+- **Fallback Images:** Ensures smooth user experience by providing fallback images for games without available artwork.
+- **Axios:** Utilizes Axios for efficient handling of HTTP requests, ensuring fast and reliable data retrieval.
+- **Cakra UI:** Employs Cakra UI for optimized and responsive user interface design.
+- **Optimized & Elegant Design:** Focuses on simplicity, ease of use, and aesthetic appeal to enhance user satisfaction.
+- **Dark Mode:** Features a switchable dark mode for enhanced user experience in low-light environments.
 
-- Configure the top-level `parserOptions` property like this:
+## How to Use:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Clone the repository to your local machine.
+2. Install dependencies using `npm install` or `yarn install`.
+3. Create a `.env` file in the root directory of the project.
+4. Add the following line to your `.env` file:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Replace `"your rawg.io API key rawg api"` with your actual API key obtained from rawg.io.
+
+5. Start the development server with `npm run dev` or `yarn dev`.
+6. Access the application through your web browser and start discovering games!
+
+## Dark Mode:
+
+To switch to dark mode, simply locate the dark mode toggle switch within the application interface and click to activate it. Enjoy browsing games in a darker, more eye-friendly environment!
+
+## Contributing:
+
+Contributions are welcome! If you have any suggestions, feature requests, or bug reports, please feel free to open an issue or submit a pull request. Together, let's make the Game Discovery Application even better!
+
+## Feedback:
+
+Your feedback is valuable! If you have any comments, questions, or concerns, don't hesitate to reach out. Your input helps us improve the application and provide a better experience for all users.
+
+## License:
+
+This project is licensed under the [MIT License](LICENSE), which means you are free to use, modify, and distribute the code as you see fit. Refer to the license file for more details.
+
+---
+
+Thank you for your interest in the Game Discovery Application! Happy gaming! 🎮✨
