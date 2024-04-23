@@ -11,5 +11,5 @@ export default function Emoji({ rating }: Props) {
 		4: { src: thumbsup, alt: "thumbs-up", boxSize: "25px" },
 		5: { src: bullsEye, alt: "bulls-eye", boxSize: "35px" },
 	};
-	return <Img {...emojiMap[rating]} />;
+	return <Img marginY={2} {...emojiMap[rating]} />;
 }
