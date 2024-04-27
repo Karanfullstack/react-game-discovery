@@ -28,7 +28,7 @@ export default function GenreList({ onSelectedGenre }: Props) {
 						<HStack>
 							<Image
 								objectFit={"cover"}
-								boxSize="35px"
+								boxSize="40px"
 								borderRadius={7}
 								src={getOptimizedImage(genre.image_background)}
 							/>
