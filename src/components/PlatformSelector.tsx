@@ -18,8 +18,8 @@ export default function PlatformSelector({
 	onSelectedPlatform,
 	selectedPlatform,
 }: Props) {
-	const { data, errors } = usePlatforms();
-	if (errors) return null;
+	const { data, error } = usePlatforms();
+	if (error) return null;
 
 	return (
 		<Box paddingY={5}>
@@ -28,7 +28,7 @@ export default function PlatformSelector({
 					{selectedPlatform?.name || "Platforms"}
 				</MenuButton>
 				<MenuList>
-					{data?.map((platform) => (
+					{data?.results.map((platform) => (
 						<MenuItem
 							key={platform.id}
 							onClick={() => onSelectedPlatform(platform)}
