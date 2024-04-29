@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
-import { FetchProps } from "../services/api-client";
-import apiClient from "../services/api-client";
 import { genreData } from "../data/genreData";
+import Service from "../services/api-client";
+
+const service = new Service<Genre>("/genres");
 export interface Genre {
 	id: number;
 	name: string;
@@ -12,8 +13,7 @@ export interface Genre {
 const useGenre = () =>
 	useQuery({
 		queryKey: ["genres"],
-		queryFn: () =>
-			apiClient.get<FetchProps<Genre>>("/genres").then((res) => res.data),
+		queryFn: service.getAll,
 		staleTime: 24 * 60 * 60 * 1000,
 		initialData: genreData,
 	});
