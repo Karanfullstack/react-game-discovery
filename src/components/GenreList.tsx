@@ -1,17 +1,17 @@
 import {
+	Button,
+	Heading,
 	HStack,
 	Image,
 	List,
 	ListItem,
 	Spinner,
-	Button,
-	Heading,
 } from "@chakra-ui/react";
-import useGenre, { Genre } from "../hooks/useGenre";
+import useGenre from "../hooks/useGenre";
 import { getOptimizedImage } from "../services/image-url";
 
 interface Props {
-	onSelectedGenre: (genre:number | undefined) => void;
+	onSelectedGenre: (genre: number) => void;
 }
 export default function GenreList({ onSelectedGenre }: Props) {
 	const { data, isLoading, error } = useGenre();

@@ -3,7 +3,8 @@ import axios from "axios";
 
 export interface FetchProps<T> {
 	count: number;
-	next: string;
+	next: null;
+	previous: null;
 	results: T[];
 }
 export const apiClient = axios.create({
