@@ -1,4 +1,4 @@
-import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import { GameQuery } from "../App";
 import Service, { FetchProps } from "../services/api-client";
 import { type Platform } from "./usePlatforms";
@@ -19,8 +19,8 @@ const useGame = (gameQuery: GameQuery) =>
 		queryFn: ({ pageParam = 1 }) =>
 			service.getAll({
 				params: {
-					genres: gameQuery.genre?.id,
-					parent_platforms: gameQuery.platform?.id,
+					genres: gameQuery.genreId,
+					parent_platforms: gameQuery.platformId,
 					ordering: gameQuery.sortOrder,
 					search: gameQuery.searchText,
 					page: pageParam,

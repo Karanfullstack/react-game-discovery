@@ -11,7 +11,7 @@ import useGenre, { Genre } from "../hooks/useGenre";
 import { getOptimizedImage } from "../services/image-url";
 
 interface Props {
-	onSelectedGenre: (genre: Genre) => void;
+	onSelectedGenre: (genre:number | undefined) => void;
 }
 export default function GenreList({ onSelectedGenre }: Props) {
 	const { data, isLoading, error } = useGenre();
@@ -34,7 +34,7 @@ export default function GenreList({ onSelectedGenre }: Props) {
 								src={getOptimizedImage(genre.image_background)}
 							/>
 							<Button
-								onClick={() => onSelectedGenre(genre)}
+								onClick={() => onSelectedGenre(genre.id)}
 								marginX={1}
 								fontSize="md"
 								variant="link"
