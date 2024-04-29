@@ -1,6 +1,10 @@
 // 26f72f865f6a46c28de40441604e2b3e
 import axios from "axios";
 
+export interface FetchProps<T> {
+	count: number;
+	results: T[];
+}
 export default axios.create({
 	baseURL: "https://api.rawg.io/api",
 	params: {
