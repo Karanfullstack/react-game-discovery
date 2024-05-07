@@ -9,12 +9,12 @@ import {
 } from "@chakra-ui/react";
 import useGenre from "../hooks/useGenre";
 import { getOptimizedImage } from "../services/image-url";
+import useQueryStore from "../store/store";
 
-interface Props {
-	onSelectedGenre: (genre: number) => void;
-}
-export default function GenreList({ onSelectedGenre }: Props) {
+export default function GenreList() {
 	const { data, isLoading, error } = useGenre();
+	const setGenreId = useQueryStore((s) => s.setGenreId);
+	const selectedGenre = useQueryStore(s=> s.gameQuery.genreId)
 
 	if (error) return null;
 	if (isLoading) return <Spinner />;
@@ -34,12 +34,13 @@ export default function GenreList({ onSelectedGenre }: Props) {
 								src={getOptimizedImage(genre.image_background)}
 							/>
 							<Button
-								onClick={() => onSelectedGenre(genre.id)}
+								onClick={() => setGenreId(genre.id)}
 								marginX={1}
 								fontSize="md"
 								variant="link"
 								whiteSpace="normal"
 								textAlign={"left"}
+								fontWeight={`${selectedGenre === genre.id ? "bold" : "normal"}`}
 							>
 								{genre.name}
 							</Button>

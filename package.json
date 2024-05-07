@@ -23,7 +23,9 @@
 		"react-dom": "^18.2.0",
 		"react-icons": "^5.0.1",
 		"react-infinite-scroll-component": "^6.1.0",
-		"uuid": "^7.0.3"
+		"simple-zustand-devtools": "^1.1.0",
+		"uuid": "^7.0.3",
+		"zustand": "^4.3.7"
 	},
 	"devDependencies": {
 		"@types/ms": "^0.7.34",
