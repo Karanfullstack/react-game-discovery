@@ -7,7 +7,7 @@ export default function Navbar() {
 	return (
 		<HStack padding="15px">
 			<Image src={logo} boxSize="60px" />
-			<SearchInput  />
+			<SearchInput />
 			<ColorMode />
 		</HStack>
 	);
