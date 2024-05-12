@@ -1,21 +1,10 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import Service, { FetchProps } from "../services/api-client";
-import { type Platform } from "./usePlatforms";
 import ms from "ms";
 import useQueryStore from "../store/store";
+import { Game } from "../entities/Game";
 
 const service = new Service<Game>("/games");
-export interface Game {
-	id: number;
-	name: string;
-	background_image: string;
-	parent_platforms: { platform: Platform }[];
-	metacritic: number;
-	rating_top: number;
-	slug: string;
-	description_raw: string;
-}
-
 const useGame = () => {
 	const gameQuery = useQueryStore((s) => s.gameQuery);
 	return useInfiniteQuery<FetchProps<Game>, Error>({
