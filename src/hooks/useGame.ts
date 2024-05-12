@@ -1,5 +1,4 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
-
 import Service, { FetchProps } from "../services/api-client";
 import { type Platform } from "./usePlatforms";
 import ms from "ms";
