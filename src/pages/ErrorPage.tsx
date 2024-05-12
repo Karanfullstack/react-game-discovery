@@ -17,7 +17,7 @@ const ErrorPage = () => {
 				flexDir="column"
 			>
 				<Heading>Opps</Heading>
-				<Text fontSize={25}>
+				<Text fontSize={24}>
 					{isRouteErrorResponse(error)
 						? "This page doesn't exist."
 						: "An expected error occured"}

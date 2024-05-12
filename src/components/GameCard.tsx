@@ -4,6 +4,7 @@ import PlatformIconList from "./PlatformIconList";
 import CriticsScore from "./CriticsScore";
 import { getOptimizedImage } from "../services/image-url";
 import Emoji from "./Emoji";
+import { Link } from "react-router-dom";
 
 interface GameProps {
 	game: Game;
@@ -19,8 +20,10 @@ export default function GameCard({ game }: GameProps) {
 					/>
 					<CriticsScore score={game.metacritic} />
 				</HStack>
-					<Heading fontSize="xl">{game.name} 	<Emoji rating={game.rating_top}/></Heading>
-				
+				<Heading fontSize="xl">
+					<Link to={`games/${game.slug}`}>{game.name}</Link>{" "}
+					<Emoji rating={game.rating_top} />
+				</Heading>
 			</CardBody>
 		</Card>
 	);

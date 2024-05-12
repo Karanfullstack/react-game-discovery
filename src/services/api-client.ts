@@ -21,6 +21,10 @@ export class Service<T> {
 			.get<FetchProps<T>>(this.endpoint, config)
 			.then((res) => res.data);
 	};
+
+	getOne = (slug: string) => {
+		return apiClient.get<T>(this.endpoint + "/" + slug).then((res) => res.data);
+	};
 }
 
 export default Service;
