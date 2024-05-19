@@ -1,6 +1,6 @@
-import { Image, SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 import useScreenShots from "../hooks/useScreenShots";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+
 import LazyLoadingImage from "./LazyLoadingImage";
 
 interface Props {

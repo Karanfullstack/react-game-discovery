@@ -1,4 +1,4 @@
-import { Card, CardBody, Heading, HStack, Img } from "@chakra-ui/react";
+import { Card, CardBody, Heading, HStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 import { getOptimizedImage } from "../services/image-url";
