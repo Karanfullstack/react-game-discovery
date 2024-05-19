@@ -7,9 +7,11 @@ export default function GameTrailer({ gameId }: Props) {
 	const { data, error, isLoading } = useTrailer(gameId);
 
 	const first = data?.results[0];
+	console.log(first?.data[480]);
 	if (isLoading) return null;
 	if (error) throw error;
+
 	return first ? (
-		<video src={first?.data[480]} poster={first?.preview} />
+		<video controls src={first.data[480]} poster={first?.preview} />
 	) : null;
 }
