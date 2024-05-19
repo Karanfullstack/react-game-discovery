@@ -6,6 +6,7 @@ import CriticsScore from "./CriticsScore";
 import Emoji from "./Emoji";
 import PlatformIconList from "./PlatformIconList";
 import { type Game } from "../entities/Game";
+import LazyLoadingImage from "./LazyLoadingImage";
 
 interface GameProps {
 	game: Game;
@@ -13,7 +14,11 @@ interface GameProps {
 export default function GameCard({ game }: GameProps) {
 	return (
 		<Card>
-			<Img src={getOptimizedImage(game?.background_image)} />
+			{/* <Img src={getOptimizedImage(game?.background_image)} /> */}
+			<LazyLoadingImage
+				image={getOptimizedImage(game?.background_image)}
+				alt={game.name}
+			/>
 			<CardBody>
 				<HStack justifyContent="space-between" marginBottom={3}>
 					<PlatformIconList
