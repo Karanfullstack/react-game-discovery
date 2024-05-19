@@ -5,7 +5,7 @@ import { getOptimizedImage } from "../services/image-url";
 import CriticsScore from "./CriticsScore";
 import Emoji from "./Emoji";
 import PlatformIconList from "./PlatformIconList";
-import { Game } from "../entities/Game";
+import { type Game } from "../entities/Game";
 
 interface GameProps {
 	game: Game;

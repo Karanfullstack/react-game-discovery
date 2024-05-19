@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import Service from "../services/api-client";
-import { Game } from "../entities/Game";
+import { type Game } from "../entities/Game";
 
 const service = new Service<Game>("/games");
 const useGameDetail = (slug: string) => {
