@@ -5,7 +5,8 @@ interface Props {
 }
 export default function GameTrailer({ gameId }: Props) {
 	const { data, error, isLoading } = useTrailer(gameId);
-	const first = data?.results[1];
+
+	const first = data?.results[0];
 	if (isLoading) return null;
 	if (error) throw error;
 	return first ? (

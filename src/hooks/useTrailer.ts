@@ -1,5 +1,3 @@
-// TODO FETCHING TRAILERS USING CUSTOM HOOK
-
 import { useQuery } from "@tanstack/react-query";
 import Service from "../services/api-client";
 import { TrailerResults } from "../entities/Trailer";
