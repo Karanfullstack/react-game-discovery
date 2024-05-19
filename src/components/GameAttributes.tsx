@@ -24,7 +24,7 @@ export default function GameAttributes({game}:Props) {
 			</DefinationsItems>
 			<DefinationsItems term="Publishers">
 				{game?.publishers.map((p) => (
-					<Text>{p.name}</Text>
+					<Text key={p.id}>{p.name}</Text>
 				))}
 			</DefinationsItems>
 		</SimpleGrid>

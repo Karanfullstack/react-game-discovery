@@ -16,7 +16,7 @@ export const apiClient = axios.create({
 
 export class Service<T> {
 	constructor(readonly endpoint: string) {}
-	getAll = (config: AxiosRequestConfig) => {
+	getAll = (config?: AxiosRequestConfig) => {
 		return apiClient
 			.get<FetchProps<T>>(this.endpoint, config)
 			.then((res) => res.data);
