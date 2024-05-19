@@ -1,4 +1,4 @@
-import { Box, Button, Text } from "@chakra-ui/react";
+import { Button, Text } from "@chakra-ui/react";
 import { useState } from "react";
 interface ExpandableProps {
 	children: string;
